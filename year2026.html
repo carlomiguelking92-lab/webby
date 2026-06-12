@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Timeline</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        // 1. Create the music player automatically on this page
+        let audio = document.getElementById('global-bg-music');
+        if (!audio) {
+            audio = document.createElement('audio');
+            audio.id = 'global-bg-music';
+            
+            // PUT YOUR ACTUAL MUSIC FILE PATH BELOW:
+            audio.src = 'C:\\Users\\carlo\\OneDrive\\Desktop\\website\\music\\Bruno-Mars-Risk-It-All-(HipHopKit.com).mp3'; 
+            
+            audio.loop = true;
+            document.body.appendChild(audio);
+        }
+
+        // 2. Read the sticky note: did we save a time from the last page?
+        const savedTime = localStorage.getItem('musicTime');
+        if (savedTime) {
+            audio.currentTime = parseFloat(savedTime);
+        }
+
+        // 3. Play the song
+        audio.play().catch(() => {
+            // If Chrome blocks it from autoplaying, play it the second she clicks anywhere!
+            document.addEventListener('click', () => { audio.play(); }, { once: true });
+        });
+
+        // 4. Write on the sticky note right before she clicks away to a new page
+        window.addEventListener('beforeunload', () => {
+            localStorage.setItem('musicTime', audio.currentTime);
+        });
+    });
+</script>
+
+<body class="calendar-page-body">
+
+    <div class="navigation-header">
+    <a href="index.html" class="back-btn">← Back to Main Letter</a>
+    </div>
+
+    <main class="yearly-calendar-wrapper">
+        
+        <div class="calendar-slider-controls">
+            <button id="prevMonthBtn" class="slider-arrow-btn">←</button>
+            <div class="calendar-titles-container">
+                <h1 class="calendar-page-title">Our Days</h1>
+                <p class="calendar-page-subtitle" id="calendarYearDisplay">2025</p>
+            </div>
+            <button id="nextMonthBtn" class="slider-arrow-btn">→</button>
+        </div>
+
+        <div class="calendar-month-section active-month" id="month-2025-mar" data-year="2025">
+            <h2 class="month-name">March 2025</h2>
+            <div class="days-container-grid">
+                <div class="day-box"><span class="day-num">1</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">2</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">3</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">4</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">5</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">6</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">7</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">8</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">9</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">10</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">11</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">12</span><div class="day-image-wrapper"></div></div>
+                
+                <div class="day-box special-day">
+                    <span class="day-num">13</span>
+                    <div class="day-content">
+                        <h4>2nd Anniversary 🥰</h4>
+                    </div>
+                    <div class="day-image-wrapper">
+                        <img src="C:\Users\carlo\OneDrive\Desktop\website\image\2ndAnnive.jpg" alt="Our 2nd Anniversary">
+                    </div>
+                </div>
+                <div class="day-box"><span class="day-num">14</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">15</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">16</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">17</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">18</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">19</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">20</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">21</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">22</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">23</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">24</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">25</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">26</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">27</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">28</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">29</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">30</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">31</span><div class="day-image-wrapper"></div></div>
+            </div>
+        </div>
+
+        <div class="calendar-month-section active-month" id="month-2025-apr" data-year="2025">
+            <h2 class="month-name">April 2025</h2>
+            <div class="days-container-grid">
+                <div class="day-box"><span class="day-num">1</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">2</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">3</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">4</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">5</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">6</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">7</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">8</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">9</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">10</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">11</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">12</span><div class="day-image-wrapper"></div></div>
+                
+                <div class="day-box special-day">
+                    <span class="day-num">13</span>
+                    <div class="day-content">
+                        <h4>25th Monthsary (No photo nasa quezon you nun.) 🥰</h4>
+                    </div>
+                </div>
+
+                <div class="day-box"><span class="day-num">14</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">15</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">16</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">17</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">18</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">19</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">20</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">21</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">22</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">23</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">24</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">25</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">26</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">27</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">28</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">29</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">30</span><div class="day-image-wrapper"></div></div>
+            </div>
+        </div>
+
+        <div class="calendar-month-section active-month" id="month-2025-may" data-year="2025">
+            <h2 class="month-name">May 2025</h2>
+            <div class="days-container-grid">
+                <div class="day-box"><span class="day-num">1</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">2</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">3</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">4</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">5</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">6</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">7</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">8</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">9</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">10</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">11</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">12</span><div class="day-image-wrapper"></div></div>
+                
+                <div class="day-box special-day">
+                    <span class="day-num">13</span>
+                    <div class="day-content">
+                        <h4>26th Monthsary (No photo ulit, baka nasayo pics nun.) 🥰</h4>
+                    </div>
+                </div>
+
+                <div class="day-box"><span class="day-num">14</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">15</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">16</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">17</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">18</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">19</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">20</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">21</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">22</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">23</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">24</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">25</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">26</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">27</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">28</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">29</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">30</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">31</span><div class="day-image-wrapper"></div></div>
+            </div>
+        </div>
+
+        <div class="calendar-month-section active-month" id="month-2025-jun" data-year="2025">
+            <h2 class="month-name">June 2025</h2>
+            <div class="days-container-grid">
+                <div class="day-box"><span class="day-num">1</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">2</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">3</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">4</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">5</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">6</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">7</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">8</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">9</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">10</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">11</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">12</span><div class="day-image-wrapper"></div></div>
+                
+                <div class="day-box special-day">
+                    <span class="day-num">13</span>
+                    <div class="day-content">
+                        <h4>27th Monthsary(No picture magkaaway tayo, and nahiya ako na magpic tayo nun.) 🥰</h4>
+                    </div>
+                </div>
+
+                <div class="day-box"><span class="day-num">14</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">15</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">16</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">17</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">18</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">19</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">20</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">21</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">22</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">23</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">24</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">25</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">26</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">27</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">28</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">29</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">30</span><div class="day-image-wrapper"></div></div>
+            </div>
+        </div>
+
+        <div class="calendar-month-section active-month" id="month-2025-jul" data-year="2025">
+            <h2 class="month-name">July 2025</h2>
+            <div class="days-container-grid">
+                <div class="day-box"><span class="day-num">1</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">2</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">3</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">4</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">5</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">6</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">7</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">8</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">9</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">10</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">11</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">12</span><div class="day-image-wrapper"></div></div>
+                
+                <div class="day-box special-day">
+                    <span class="day-num">13</span>
+                    <div class="day-content">
+                        <h4>28th Monthsary(No pic ulit nasa japan ka.) 🥰</h4>
+                    </div>
+                </div>
+
+                <div class="day-box"><span class="day-num">14</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">15</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">16</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">17</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">18</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">19</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">20</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">21</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">22</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">23</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">24</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">25</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">26</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">27</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">28</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">29</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">30</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">31</span><div class="day-image-wrapper"></div></div>
+            </div>
+        </div>
+
+       <div class="calendar-month-section active-month" id="month-2025-aug" data-year="2025">
+            <h2 class="month-name">August 2025</h2>
+            <div class="days-container-grid">
+                <div class="day-box"><span class="day-num">1</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">2</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">3</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">4</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">5</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">6</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">7</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">8</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">9</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">10</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">11</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">12</span><div class="day-image-wrapper"></div></div>
+                
+                <div class="day-box special-day" style="position: relative; display: flex; flex-direction: column; padding: 8px; box-sizing: border-box; height: 100%;">
+                <!-- Absolute positioning keeps the '13' out of the way of the text -->
+                <span class="day-num" style="position: absolute; top: 6px; left: 8px; font-size: 0.8rem; margin: 0;">13</span>
+    
+                <!-- Added top padding so the text doesn't hit the number 13 -->
+                <div class="day-content" style="text-align: center; margin-top: 12px; margin-bottom: 6px;">
+                <h4 style="margin: 0; font-size: 0.72rem; line-height: 1.2; font-weight: 600; color: #333;">
+                29th Monthsary(Sinundo kita dito hehe.) 🥰
+                </h4>
+                </div>
+    
+                <!-- Removing the hard pixel height lets the image fill the rest of the square safely -->
+                <div class="day-image-wrapper" style="width: 100%; flex-grow: 1; overflow: hidden; border-radius: 6px; display: flex;">
+                <img src="C:\Users\carlo\OneDrive\Desktop\website\image\29thmonth.jpg" alt="Our 29th Monthsary" style="width: 100%; height: 100%; object-fit: cover; object-position: center 30%;">
+                </div>
+                </div>
+
+                <div class="day-box"><span class="day-num">14</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">15</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">16</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">17</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">18</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">19</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">20</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">21</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">22</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">23</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">24</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">25</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">26</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">27</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">28</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">29</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">30</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">31</span><div class="day-image-wrapper"></div></div>
+            </div>
+        </div>
+
+        <div class="calendar-month-section active-month" id="month-2025-sep" data-year="2025">
+            <h2 class="month-name">September 2025</h2>
+            <div class="days-container-grid">
+                <div class="day-box"><span class="day-num">1</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">2</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">3</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">4</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">5</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">6</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">7</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">8</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">9</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">10</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">11</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">12</span><div class="day-image-wrapper"></div></div>
+                
+                <div class="day-box special-day">
+                    <span class="day-num">13</span>
+                    <div class="day-content">
+                        <h4>30th Monthsary(POTA Event) 🥰</h4>
+                    </div>
+                    <div class="day-image-wrapper">
+                        <img src="C:\Users\carlo\OneDrive\Desktop\website\image\30thmonth.jpg" alt="Our 30th Monthsary">
+                    </div>
+                </div>
+
+                <div class="day-box"><span class="day-num">14</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">15</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">16</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">17</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">18</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">19</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">20</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">21</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">22</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">23</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">24</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">25</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">26</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">27</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">28</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">29</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">30</span><div class="day-image-wrapper"></div></div>
+            </div>
+        </div>
+
+        <div class="calendar-month-section active-month" id="month-2025-oct" data-year="2025">
+            <h2 class="month-name">October 2025</h2>
+            <div class="days-container-grid">
+                <div class="day-box"><span class="day-num">1</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">2</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">3</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">4</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">5</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">6</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">7</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">8</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">9</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">10</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">11</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">12</span><div class="day-image-wrapper"></div></div>
+                
+                <div class="day-box special-day">
+                    <span class="day-num">13</span>
+                    <div class="day-content">
+                        <h4>31st Monthsary 🥰</h4>
+                    </div>
+                    <div class="day-image-wrapper">
+                        <img src="C:\Users\carlo\OneDrive\Desktop\website\image\31stmonth.jpg" alt="Our 31st Monthsary">
+                    </div>
+                </div>
+
+                <div class="day-box"><span class="day-num">14</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">15</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">16</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">17</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">18</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">19</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">20</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">21</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">22</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">23</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">24</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">25</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">26</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">27</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">28</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">29</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">30</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">31</span><div class="day-image-wrapper"></div></div>
+            </div>
+        </div>
+
+        <div class="calendar-month-section active-month" id="month-2025-nov" data-year="2025">
+            <h2 class="month-name">November 2025</h2>
+            <div class="days-container-grid">
+                <div class="day-box"><span class="day-num">1</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">2</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">3</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">4</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">5</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">6</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">7</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">8</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">9</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">10</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">11</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">12</span><div class="day-image-wrapper"></div></div>
+                
+                <div class="day-box special-day">
+                    <span class="day-num">13</span>
+                    <div class="day-content">
+                        <h4>32nd Monthsary(Photo from Nov. 3) 🥰</h4>
+                    </div>
+                    <div class="day-image-wrapper">
+                        <img src="C:\Users\carlo\OneDrive\Desktop\website\image\32ndmonth.jpg" alt="Our 32nd Monthsary">
+                    </div>
+                </div>
+
+                <div class="day-box"><span class="day-num">14</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">15</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">16</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">17</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">18</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">19</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">20</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">21</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">22</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">23</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">24</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">25</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">26</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">27</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">28</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">29</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">30</span><div class="day-image-wrapper"></div></div>
+            </div>
+        </div>
+
+        <div class="calendar-month-section active-month" id="month-2025-dec" data-year="2025">
+            <h2 class="month-name">December 2025</h2>
+            <div class="days-container-grid">
+                <div class="day-box"><span class="day-num">1</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">2</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">3</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">4</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">5</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">6</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">7</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">8</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">9</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">10</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">11</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">12</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box special-day">
+                    <span class="day-num">13</span>
+                    <div class="day-content">
+                        <h4>33rd Monthsary 🥰</h4>
+                    </div>
+                    <div class="day-image-wrapper">
+                        <img src="C:\Users\carlo\OneDrive\Desktop\website\image\33rdmonth.jpg" alt="Our 33rd Monthsary">
+                    </div>
+                </div>
+                
+
+                <div class="day-box"><span class="day-num">14</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">15</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">16</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">17</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">18</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">19</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">20</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">21</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">22</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">23</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">24</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">25</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">26</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">27</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">28</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">29</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">30</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">31</span><div class="day-image-wrapper"></div></div>
+            </div>
+        </div>
+
+
+        <div class="calendar-month-section active-month" id="month-2026-jan" data-year="2026">
+            <h2 class="month-name">January 2026</h2>
+            <div class="days-container-grid">
+                <div class="day-box"><span class="day-num">1</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">2</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">3</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">4</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">5</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">6</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">7</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">8</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">9</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">10</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">11</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">12</span><div class="day-image-wrapper"></div></div>
+                
+                <div class="day-box special-day">
+                    <span class="day-num">13</span>
+                    <div class="day-content">
+                        <h4>34th Monthsary 🥰</h4>
+                    </div>
+                    <div class="day-image-wrapper">
+                        <img src="C:\Users\carlo\OneDrive\Desktop\website\image\34thmonth.jpg" alt="Our 34th Monthsary">
+                    </div>
+                </div>
+
+                <div class="day-box"><span class="day-num">14</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">15</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">16</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">17</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">18</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">19</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">20</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">21</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">22</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">23</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">24</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">25</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">26</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">27</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">28</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">29</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">30</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">31</span><div class="day-image-wrapper"></div></div>
+            </div>
+        </div>
+
+        <div class="calendar-month-section active-month" id="month-2026-feb" data-year="2026">
+            <h2 class="month-name">February 2026</h2>
+            <div class="days-container-grid">
+                <div class="day-box"><span class="day-num">1</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">2</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">3</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">4</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">5</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">6</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">7</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">8</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">9</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">10</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">11</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">12</span><div class="day-image-wrapper"></div></div>
+                
+                <div class="day-box special-day">
+                    <span class="day-num">13</span>
+                    <div class="day-content">
+                        <h4>35th Monthsary(Late Valentines.) 🥰</h4>
+                    </div>
+                    <div class="day-image-wrapper">
+                        <img src="C:\Users\carlo\OneDrive\Desktop\website\image\35thmonth.jpg" alt="Our 35th Monthsary">
+                    </div>
+                </div>
+
+                <div class="day-box"><span class="day-num">14</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">15</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">16</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">17</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">18</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">19</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">20</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">21</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">22</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">23</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">24</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">25</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">26</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">27</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">28</span><div class="day-image-wrapper"></div></div>
+            </div>
+        </div>
+
+        <div class="calendar-month-section active-month" id="month-2026-mar" data-year="2026">
+            <h2 class="month-name">March 2026</h2>
+            <div class="days-container-grid">
+                <div class="day-box"><span class="day-num">1</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">2</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">3</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">4</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">5</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">6</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">7</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">8</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">9</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">10</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">11</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">12</span><div class="day-image-wrapper"></div></div>
+                
+                <div class="day-box special-day">
+                    <span class="day-num">13</span>
+                    <div class="day-content">
+                        <h4>3rd Anniversary 🥰</h4>
+                    </div>
+                    <div class="day-image-wrapper">
+                        <img src="C:\Users\carlo\OneDrive\Desktop\website\image\third.jpg" alt="Our 3rd Anniversary">
+                    </div>
+                </div>
+
+                <div class="day-box"><span class="day-num">14</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">15</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">16</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">17</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">18</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">19</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">20</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">21</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">22</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">23</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">24</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">25</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">26</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">27</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">28</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">29</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">30</span><div class="day-image-wrapper"></div></div>
+                <div class="day-box"><span class="day-num">31</span><div class="day-image-wrapper"></div></div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const months = document.querySelectorAll('.calendar-month-section');
+        const yearDisplay = document.getElementById('calendarYearDisplay');
+        
+        let currentMonthIndex = 0;
+        
+        function updateMonthView() {
+            months.forEach((month, idx) => {
+                if(idx === currentMonthIndex) {
+                    month.classList.add('active-month');
+                    yearDisplay.textContent = month.getAttribute('data-year');
+                } else {
+                    month.classList.remove('active-month');
+                }
+            });
+        }
+
+        document.getElementById('prevMonthBtn').addEventListener('click', () => {
+            if (currentMonthIndex > 0) {
+                currentMonthIndex--;
+                updateMonthView();
+            }
+        });
+
+        document.getElementById('nextMonthBtn').addEventListener('click', () => {
+            if (currentMonthIndex < months.length - 1) {
+                currentMonthIndex++;
+                updateMonthView();
+            }
+        });
+
+        updateMonthView();
+    </script>
+</body>
+</html>

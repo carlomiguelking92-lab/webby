@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="popupOverlay" class="popup-overlay">
+        <div class="popup-box">
+            <h2>Hi Laica... 💖</h2>
+            <p>I made something special for you. Would you like to check it out?</p>
+            <div class="popup-buttons">
+                <button id="yesBtn" class="btn-yes">Yes</button>
+                <button id="noBtn" class="btn-no">No</button>
+            </div>
+        </div>
+    </div>
+
+    <audio id="bg-music" src="music/Bruno-Mars-Risk-It-All-(HipHopKit.com).mp3" loop></audio>
+    <button id="musicBtn" class="music-toggle">🎵 Play Her Song</button>
+
+    <header class="hero-section">
+        <div class="letter-container">
+            <h1 class="letter-heading">To Laica,</h1>
+            
+            <p class="letter-text">
+            First of all I wanted to say how sorry I am for leaving a scar on your heart. I understand that you need this space right now, and I completely respect your decision to distance yourself.
+            </p>
+
+            <p class="letter-text">
+            But, listen for a moment. When I first saw you, all I saw was a woman who is incredibly strong and sweet at the same time. That was my first impression of you, and it never changed. 
+            </p>
+
+            <p class="letter-text">
+            I am really sorry for what happened between us, and I am genuinely working to better myself every single day. I want you to understand that I loved you with all my heart, and it genuinely hurts me to think that you might not have felt that completely when we were together. 
+            </p>
+
+            <p class="letter-text">
+            I built this website for us, just to remember the beautiful memories we made. I know that these memories won't erase the mistakes I made or the times I hurt you, but they are moments I will always hold close to my heart.
+            </p>
+
+            <div class="counter-title">Time with you:</div>
+            <div class="counter-container">
+                <div class="counter-box"><span id="days">00</span><p>Days</p></div>
+                <div class="counter-box"><span id="hours">00</span><p>Hours</p></div>
+                <div class="counter-box"><span id="minutes">00</span><p>Mins</p></div>
+                <div class="counter-box"><span id="seconds">00</span><p>Secs</p></div>
+            </div>
+            
+            <div class="scroll-arrow">↓</div>
+        </div>
+    </header>
+
+    <section class="calendar-section">
+        <div class="calendar-intro">
+            <h2>Our Days</h2>
+            <p>Every moment meant something. Click on a milestone to view our complete yearly day-by-day calendars.</p>
+        </div>
+
+        <div class="calendar-container">
+            
+            <a href="year2024.html" class="anchor-card-link">
+                <div class="calendar-card" data-memory="1">
+                    <div class="card-date">March 13, 2024</div>
+                    <div class="card-title">Our 1st Anniversary 💖</div>
+                    <img src="image/first1.jpg" alt="Our First Anniversary" class="memory-image">
+                    <p class="memory-caption">Remember we went to Enchanted Kingdom, we celebrated late but we we're still happy and you made me meet your friends hehe. This was the day I realized how incredibly lucky I was to have you.</p>
+                    <span class="click-prompt">View Year 1 Full Calendar →</span>
+                </div>
+            </a>
+
+            <a href="year2025.html" class="anchor-card-link">
+                <div class="calendar-card" data-memory="2">
+                    <div class="card-date">March 13, 2025</div>
+                    <div class="card-title">Our 2nd Anniversary 💕</div>
+                    <img src="image/second.jpg" alt="Our Second Anniversary" class="memory-image">
+                    <p class="memory-caption">Another year down. Even when things got chaotic, you were my favorite part of every single day. We celebrated late again but we still made it memorable.</p>
+                    <span class="click-prompt">View Year 2 Full Calendar →</span>
+                </div>
+            </a>
+
+            <a href="year2026.html" class="anchor-card-link">
+                <div class="calendar-card" data-memory="3">
+                    <div class="card-date">March 13, 2026</div>
+                    <div class="card-title">Our 3rd Anniversary 💕</div>
+                    <img src="image/third.jpg" alt="Our Third Anniversary" class="memory-image">
+                    <p class="memory-caption">Ahh, Our third anniversary. The most memorable one. We slept together and spent our time whole day.</p>
+                    <span class="click-prompt">View Year 3 Full Calendar →</span>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
