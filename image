@@ -1,4 +1,0 @@
-*(Make sure it's lowercase! The very second you type that forward slash `/`, GitHub will automatically turn "image" into a folder right before your eyes.)*
-3. To save the new folder, you have to put a temporary file in it. Right after the slash, type `placeholder.txt` so the full box looks like:
-   ```text
-image/placeholder.txt
